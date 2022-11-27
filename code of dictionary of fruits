@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+
+namespace Dictionary
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Dictionary<string, string> FruitList = new Dictionary<string, string>();
+            FruitList.Add("Apple", "saib");
+            FruitList.Add("Banana", "Kela");
+            FruitList.Add("Mango", "Aam");
+            FruitList.Add("Orange", "Malta");
+            FruitList.Add("Grape", "Angor");
+            FruitList.Add("Watermelon","Tarboze");
+            FruitList.Add("Guava", "Amrood");
+            FruitList.Add("Peach", "Aardo");
+            FruitList.Add("Dates", "khjoor");
+            FruitList.Add("Pomegranate", "Anaar");
+            Console.WriteLine("enter the fruitnames");
+            string names=Console.ReadLine();
+            foreach (var item in FruitList)
+            { string keysname=item.Key;
+                string valuename=item.Value;
+                if (names == keysname)
+                {
+                    Console.WriteLine(valuename);
+                }
+                else
+                {
+                    Console.WriteLine("Only enter the one name of fruit in the fruit list of  10s like Apple,Banana,Mango,Orange,Grape,Watermelon,Guara,Peach,Dates,Pomegranate ");
+                    break;
+                }
+                //Console.WriteLine("{0},{1}", item.Key, item.Value);
+            }
+        }
+
+
+
+    }
+}
